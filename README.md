@@ -18,11 +18,19 @@ float Glossiness = 20.0; // Контролирует резкость блико
 1. Фоновое освещение (Ambient)
 Самый простой компонент, который добавляет базовый уровень освещенности ко всем поверхностям независимо от их ориентации или положения относительно источников света.
 
+<div align="center">
+  <img src="amb.png" alt="Ambient" width="300">
+</div>
+
 2. Рассеянный свет (Diffuse)
 Рассчитывается на основе:
  - Угла между нормалью поверхности и направлением к источнику света (закон Ламберта)
  - Цвета поверхности (из текстуры)
  - Цвета и интенсивности источника света
+
+<div align="center">
+  <img src="diff.png" alt="Diffuse" width="300">
+</div>
 
 ```hlsl
 Использует закон Ламберта:
@@ -36,6 +44,10 @@ float4 Diffuse = diffuselight * DiffuseColor * ColorTexture * lightColor;
   - Угла между направлением отраженного света и направлением к камере
   - "Глянцевости" поверхности (параметр Glossiness)
   - Интенсивности бликов (Specular Color)
+
+<div align="Specular">
+  <img src="spec.png" alt="Diffuse" width="300">
+</div>
 
 ```hlsl
 Модель Блинна-Фонга:
@@ -147,6 +159,6 @@ float4 f(v2f In, uniform float4 lightColor) : COLOR
 }
 ```
 <div align="center">
-  <img src="summ.png" alt="HLSL-Basic-Light-Model" width="500">
+  <img src="summ.png" alt="Summ" width="300">
 </div>
 
