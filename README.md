@@ -146,5 +146,5 @@ float4 f(v2f In, uniform float4 lightColor) : COLOR
   return (Ambient + Diffuse + Specular) * lightColor;
 }
 ```
-
+![HLSL-Basic-Light-Model](summ.png)
 
