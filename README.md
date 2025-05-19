@@ -45,9 +45,11 @@ float4 Diffuse = diffuselight * DiffuseColor * ColorTexture * lightColor;
   - "Глянцевости" поверхности (параметр Glossiness)
   - Интенсивности бликов (Specular Color)
 
+
 <div align="Specular">
   <img src="spec.png" alt="Diffuse" width="300">
 </div>
+
 
 ```hlsl
 Модель Блинна-Фонга:
